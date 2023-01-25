@@ -1,0 +1,652 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CITROËN</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="ad.size" content="width=300,height=600">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://s0.2mdn.net/creatives/assets/4669899/stylesheet.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var clickTag = "http://www.google.com";
+
+  </script>
+  <style>
+
+    body {
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  font-family: 'Citroen Type';
+  font-weight: 500;
+  color: #3e4249;
+/*  text-transform: uppercase;*/
+  letter-spacing: -0.04em;
+}
+
+#upperLayer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 592px;
+  height: 564px;
+  width: 300px;
+  height: 600px;
+  box-shadow: 0px 0px 0px 1px #333333 inset;
+  overflow: hidden;
+}
+
+.bouton {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.colorCom {
+  color: #1d356b;
+}
+
+.bgColorCom {
+  background-color: #1d356b;
+}
+
+#clickthrough-button {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 592px;
+  height: 564px;
+  width: 300px;
+  height: 600px;
+  box-shadow: 0px 0px 0px 1px #333333 inset;
+  background-color: white;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+#backgroundImage {
+  position: absolute;
+  filter: saturate(1.67) contrast(2) brightness(1.2);
+}
+
+.ruban {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.maskruban {
+  position: absolute;
+  width: 500px;
+  height: 937.5px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#arcG, #arcD {
+  overflow: hidden;
+}
+
+#anim {
+  overflow: visible;
+}
+
+#outline {
+  box-shadow: 0px 0px 0px 10px white inset;
+}
+
+#mainTitle {
+  position: absolute;
+  left: 10px;
+  top: 178px;
+  width: 280px;
+  font-size: 20px;
+  line-height: 85%;
+  vertical-align: bottom;
+}
+
+#motorisation {
+  position: absolute;
+  left: 14px;
+  top: 54px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.screen {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 600px;
+  overflow: hidden;
+}
+
+#logo, #logoBis {
+  position: absolute;
+  top: 14px;
+  right: 17px;
+  width: 146px;
+}
+
+#logoUsp{
+  height: 150px;
+}
+
+.shadow {
+  filter: drop-shadow(0rem 0rem 0.5rem rgba(0, 0, 0, 0.6));
+}
+
+#claim {
+  position: absolute;
+  top: 195px;
+  left: 10px;
+  font-size: 17px;
+  line-height: 100%;
+  font-weight: normal;
+}
+
+.uspImg{
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  visibility: hidden;
+}
+
+.usps {
+  position: absolute;
+  left: 11px;
+  top: 195px;
+  width: 276px;
+  font-size: 17px;
+  line-height: 100%;
+  font-weight: normal;
+}
+
+
+#logos {
+  position: absolute;
+  top: 110px;
+  left: 170px;
+  width: 130px;
+  text-align: center;
+}
+
+#logo1, #logo2, #logo3 {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+#cta {
+  position: absolute;
+  left: 10px;
+  top: 188px;
+  width: 140px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 90%;
+}
+
+#cta span{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+sup {
+  font-size: 70%;
+  line-height: 0;
+}
+
+/*      blocs prix       */
+
+#packshotPrix {
+  position: absolute;
+  top: 168px;
+  left: 160px;
+  height: 68px;
+  width: 125px;
+  align-items: center;
+}
+
+#prixnet, #prixloyer, #prixavantage, #centreur{
+  position: absolute;
+  left: -150px;
+  top: 8px;
+  width: auto;
+}
+
+#packshotPrix p {
+  margin: 0;
+}
+
+.apartir{
+  position: absolute;
+  top: -2px;
+  text-transform: none;
+  font-size: 15px;
+  font-weight: normal;
+  width: 170px;
+}
+
+.prix{
+  position: absolute;
+  top: 12px;
+  margin-bottom: 2px;
+  width: 170px;
+}
+
+#prixloyervalue {
+  letter-spacing: -1px;
+}
+
+.prix p{
+  font-size: 50px;
+  line-height: 90%;
+  height: 23px;
+}
+
+.prix sup{
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0px;
+  font-size:50%;
+  left: -3px;
+}
+
+#prixloyer sub{
+  position: relative;
+  left: 85px;
+  top:-55px;
+  font-size:30%;
+  line-height: 0;
+  font-weight: 500;
+}
+
+.prix .cf{
+  position: relative;
+  top: -8px;
+  left: -12px;
+  font-size:30%;
+}
+
+#prixavantage .cf{
+  left: 0px;
+}
+
+.condition {
+  position: absolute;
+  left: 125px;
+/*  top: 4px;*/
+  width: 145px;
+  font-size: 9px;
+  font-weight: 300;
+  line-height: 90%;
+  text-align: justify;
+  padding: 7px;
+  letter-spacing: -0.02em;
+/*  border: 1px solid black;*/
+}
+
+.condition span {
+  letter-spacing: -0.07em;
+}
+
+.ecoCondition {
+  text-transform: none;
+  font-size: 9px;
+  margin-top: 3px;
+  font-weight: normal;
+  line-height: 90%;
+}
+
+.cachedient{
+   position: absolute; 
+    left: -18px;
+    top: 20px;
+}
+
+#prixnet{
+    display: none;
+}
+
+#blocEcoNet{
+    display: none;
+}
+
+#prixloyer{
+/*    display: none;*/
+/*  border: 1px solid red;*/
+}
+
+#blocEcoLoyer{
+    display: none;
+}
+
+#prixavantage{
+    display: none;
+}
+
+.ML{
+  position: absolute;
+  left:10px;
+  bottom: 5px;
+  text-align: left;
+  font-weight: normal;
+  font-size: 8.7px;
+  width: 280px;
+  line-height: 9px;
+  letter-spacing: 0px;
+  text-transform: none;
+}
+
+#ML2{
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+#ML2 span{
+  background-color: gainsboro;
+  padding-left: 3px;
+  padding-right: 2px;
+}
+
+
+    
+    #container {
+      visibility: hidden;
+
+
+
+
+    }
+
+  </style>
+  <script type="text/javascript">
+    function loadFile(path, type) {
+      if (type == "js") {
+        var fileref = document.createElement('script');
+        fileref.setAttribute("type", "text/javascript");
+        fileref.setAttribute("src", path);
+      } else if (type == "css") {
+        var fileref = document.createElement("link");
+        fileref.setAttribute("rel", "stylesheet");
+        fileref.setAttribute("type", "text/css");
+        fileref.setAttribute("href", path);
+      }
+      document.getElementsByTagName("head")[0].appendChild(fileref);
+    }
+    
+
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="frame1" class="screen">
+      <div id="anim" class="screen">
+        <img id="backgroundImage" class="ruban" src="images/bg.jpg" width="500">
+        <div id="arcD" class="maskruban">
+          <img class="ruban" src="images/arcD.png" width="150">
+        </div>
+        <div id="arcG" class="maskruban">
+          <img class="ruban" src="images/arcG.png" width="500">
+        </div>
+        <img id="car" class="ruban" src="images/C5AC.png" width="500">
+      </div>
+      <img id="uspImg1" class="uspImg" src="images/s1.jpg" width="500">
+      <img id="uspImg2" class="uspImg" src="images/s2.jpg" width="500">
+    </div>
+    <div id="outline" class="screen"></div>
+    <div id="mainTitle" class="mainTitle">
+      <span id="title" >NOUVEAU C5 AIRCROSS</span><br>
+      <span id="subtitle"></span>
+    </div>
+    <div id="motorisation"> </div>
+
+    <div id="part1" class="screen">
+      <div id="claim" class="colorCom">
+        Aussi généreux que vous
+      </div>
+      <div id="MLclaim" class="ML"></div>
+      <div class="usps colorCom" id="usp1">
+        3 sièges arrière indépendants<br> de même largeur
+      </div>
+      <div id="MLusp1" class="ML">
+      </div>
+      <div class="usps colorCom" id="usp2">
+        Volume de coffre jusqu’à 1 630 l
+      </div>
+      <div id="MLusp2" class="ML">
+      </div>
+      <div id="cta" class="bgColorCom"><span>PROFITEZ-EN</span></div>
+      <div id="packshotPrix">
+        <div id="prixnet">
+          <p class="apartir">À partir de </p>
+          <div class="prix">
+            <p class="colorCom">
+              <span id="prixnetvalue">17 999</span>
+              <sup id="prixnetcurrency">€</sup><sup class="cf">*</sup>
+            </p>
+          </div>
+          <p class="condition">sous conditions de reprise*</p>
+          <div id="blocEcoNet">
+            <img id="ecoNet" src="images/nologo.svg" width="76">
+            <p class="ecoCondition">
+              Éligible à la prime
+              à la conversion
+            </p>
+          </div>
+        </div>
+        <div id="prixloyer">
+          <p class="apartir">À partir de</p>
+          <div class="prix">
+            <p class="colorCom">
+              <span id="prixloyervalue">449</span>
+              <sup id="prixloyercurrency">€</sup>
+              <sup class="cf">*</sup>
+              <sub id="prixloyerperiod">/mois</sub>
+            </p>
+          </div>
+          <p id="conditionPrixLoyer" class="condition">
+            1<sup>er</sup> loyer de 0 € après déduction du bonus écologique et de la prime à la conversion<br>
+            LLD 48 mois/40 000 KM<br>
+            <span>4 ans de garantie et assistance offerts</span><br>
+            Sans  condition de reprise
+          </p>
+          <div id="blocEcoLoyer">
+            <p class="ecoCondition">
+              Éligible à la prime
+              à la conversion
+            </p>
+          </div>
+        </div>
+        <div id="prixavantage">
+          <p class="apartir">REPRISE</p>
+          <div class="prix">
+            <p class="colorCom">+<span id="prixavantagevalue">3 000</span><sup> </sup><sup id="prixavantagecurrency">€</sup><sup class="cf">*</sup></p>
+          </div>
+          <p class="condition">
+          </p>
+        </div>
+      </div>
+      <div id="ML" class="ML">
+        * voir détails de l’offre.
+      </div>
+      <div id="ML2" class="ML">
+      </div>
+    </div>
+    <img id="logo" class="shadow" src="images/logo_citroen.svg">
+    <div id="logoUsp" class="screen">
+      <img id="logoBis" src="images/logo_citroen2.svg">
+    </div>
+  </div>
+  <div id="upperLayer">
+    <button id="clickthrough-button" onclick="javascript:window.open(window.clickTag)" class="bouton"></button>
+  </div>
+  <script type="text/javascript">
+    var tl;
+    var howManyLogo = 0;
+
+    window.onload = function() {
+      
+      tl = gsap.timeline({repeat: 1, repeatDelay: 2, onRepeat:upCTAandML2});
+
+      tl.set(container, {visibility: "visible"});
+
+      tl.addLabel("screen1");
+      
+      tl.to(logo, {duration: 0.5, filter: "drop-shadow(0rem 0rem 0rem rgba(0, 0, 0, 0))"}, "screen1+=0.5");
+      tl.from([backgroundImage, arcD, arcG], {duration: 2.5, scale:5, x:200, y:100, ease:Power3.easeOut}, "screen1");
+      tl.to(backgroundImage, {duration: 1.5, filter:"saturate(1) contrast(1) brightness(1)", ease:Power2.easeOut}, "screen1+=0.75");
+      tl.from(car, {duration: 1, scale:0.575, x:-30, ease:Power3.easeOut}, "screen1+=0.25");
+      tl.from(car, {duration: 0.25, opacity:0, ease:Power1.easeOut}, "screen1+=0.25");
+      tl.from(arcD, {duration: 3.5, height:0, width:200, ease:Power1.easeOut}, "screen1+=1.25");
+      tl.from(arcG, {duration: 3.5, height:0, width:250, ease:Power1.easeOut}, "screen1+=1.25");
+      
+      tl.addLabel("screen2", "screen1+=3.5");
+      
+      
+      tl.from([claim, MLclaim], {duration:0.5, y: 40, opacity: 0 }, "screen2+=0.25");
+      tl.from(mainTitle, {duration: 0.5, y: 40, opacity: 0 }, "screen2+=0.25");
+      tl.set([".maskruban"], {overflow: "visible"}, "screen2");
+      tl.to(frame1, {duration:0.75, height:329}, "screen2");
+      tl.to(anim, {duration:0.5, y:-32, scale:0.67}, "screen2");
+      
+      tl.addLabel("screen3", "screen2+=2.5");
+      
+      tl.to([claim, MLclaim], {duration:0.5, opacity: 0, y:127 }, "screen3");
+//      tl.to(mainTitle, {duration:0.5, y:-7 }, "screen3");
+      
+      tl.to(frame1, {duration:0.5, y: 50, height: 115}, "screen3");
+      tl.from(logoUsp, {duration:0.5, height: 0}, "screen3+=0.1");
+      
+      tl.set(uspImg1, {visibility:"visible"}, "screen3");
+      tl.from(uspImg1, {duration:0.5, x: -300}, "screen3");
+      tl.to(uspImg1, {duration:0.5, scale: 280/320}, "screen3+=0.25");
+      tl.from([usp1, MLusp1], {duration:0.5, opacity: 0, x: -300 }, "screen3");
+
+      if(howManyLogo > 0){
+        tl.addLabel("screen4", "screen3+=2.5");
+      } else {
+        tl.addLabel("screen4", "screen3+=3.3");
+      }
+
+      tl.to([usp1, MLusp1], {duration:0.5, x:300 }, "screen4");
+      tl.to([usp1, MLusp1], {duration:0.25, opacity: 0 }, "screen4");
+      tl.set(uspImg1, {visibility:"hidden"}, "screen4+=0.75");
+      
+      tl.set(uspImg2, {visibility:"visible"}, "screen4");
+      tl.from(uspImg2, {duration:0.5, x: -300}, "screen4");
+      tl.to(uspImg2, {duration:0.5, scale: 280/320}, "screen4+=0.25");
+      tl.from([usp2, MLusp2], {duration:0.5, opacity: 0, x: -300 }, "screen4");
+      
+      if(howManyLogo > 0){
+        tl.addLabel("screen5", "screen4+=2.5");
+      } else{
+        tl.addLabel("screen5", "screen4+=3.3");
+      }
+
+      tl.to([usp2, MLusp2], {duration:0.5, x:300 }, "screen5");
+      tl.to([usp2, MLusp2], {duration:0.25, opacity: 0 }, "screen5");
+      tl.set(uspImg2, {visibility:"hidden"}, "screen5+=0.75");
+      tl.to(uspImg2, {duration:0.75, x: 600}, "screen5");
+      
+      tl.addLabel("screen6", "screen5");
+      
+      tl.to(frame1, {duration:0.5, y: 0, height:329}, "screen6");
+      tl.to(logoUsp, {duration:0.5, height: 0}, "screen6");
+      tl.to(mainTitle, {duration:0.5, y:-33}, "screen6");
+
+
+      tl.addLabel("screenLogo1", "screen6");
+      tl.addLabel("screenLogo2", "screenLogo1+=1.5");
+      tl.addLabel("screenLogo3", "screenLogo2+=1.5");
+
+      if(howManyLogo == 0){
+        tl.remove("screenLogo1");
+        tl.remove("screenLogo2");
+        tl.remove("screenLogo3");
+        tl.addLabel("screen7", "screen6");
+      }
+      if(howManyLogo > 0){
+        tl.addLabel("screen4", "screen3+=2.8");
+        tl.addLabel("screen5", "screen4+=2.8");
+        tl.remove("screenLogo2");
+        tl.remove("screenLogo3");
+        tl.from(logo1, .5, {y: 44, opacity: 0}, "screenLogo1");
+        tl.to(logo1, .5, {y: -53, opacity: 0}, "screenLogo1+=3");
+        tl.addLabel("screen7", "screenLogo1+=3");
+      }
+      if(howManyLogo > 1){
+        tl.remove("screenLogo3");
+        tl.from(logo2, .5, {y: 44, opacity: 0}, "screenLogo2");
+        tl.to(logo2, .5, {y: -53, opacity: 0}, "screenLogo2+=3");
+        tl.addLabel("screen7", "screenLogo2+=3");
+      }
+      if(howManyLogo == 3){
+        tl.from(logo3, .5, {y: 44, opacity: 0}, "screenLogo3");
+        tl.to(logo3, .5, {y: -53, opacity: 0}, "screenLogo3+=2");
+        tl.addLabel("screen7", "screenLogo3+=2");
+      }
+
+      tl.from(packshotPrix, .5, {y: 150 }, "screen7");
+      tl.from(ML, .5, {y: 150 }, "screen7");
+
+      tl.to(conditionPrixLoyer, .5, {opacity: 0 }, "screen7+=2.2");
+      tl.to(packshotPrix, .5, {x: 150 }, "screen7+=2.2");
+      tl.to(ML, .5, {x: 190 }, "screen7+=2.2");
+      tl.from(cta, .5, {height: 0, opacity: 0 }, "screen7+=2.7");
+      tl.from(ML2, .5, {y: 150 }, "screen7+=2.7");
+      
+      
+//      tl.pause(14);
+//      tl.play(15);
+//      tl.timeScale(0.1);
+      if(tl.endTime()>30) tl.timeScale(tl.endTime()/30);
+      console.log(tl.endTime());
+    }
+    
+    upCTAandML2 = function(){
+      gsap.set(cta,{top:182});
+      switch(parseInt(Math.random()*1000)%3){
+        case 0 :
+          ML2.innerHTML = "<span>Pour les trajets courts, privilégiez </span> <br><span>la marche ou le vélo. #SeDéplacerMoinsPolluer</span>";
+          break;
+        case 1 :
+          ML2.innerHTML = "<br><span>Pensez à covoiturer.</span> <br><span>#SeDéplacerMoinsPolluer</span>";
+          gsap.set(ML2,{letterSpacing:"0.1px"});
+          break;
+        case 2 :
+          ML2.innerHTML = "<span>Au quotidien, prenez les transports en commun.</span> <br><span>#SeDéplacerMoinsPolluer</span>";
+          break;
+      }
+    }
+  </script>
+
+
+
+</body>
+
+</html>
